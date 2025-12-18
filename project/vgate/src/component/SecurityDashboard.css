@@ -1,0 +1,212 @@
+/* SecurityDashboard.css */
+.security-container {
+  padding: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.selection-info {
+  flex: 1;
+}
+
+.selected-count {
+  background-color: #e7f3ff;
+  color: #0066cc;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.select-all-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.select-all-btn:hover {
+  background-color: #5a6268;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 200px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.security-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.security-table th {
+  background-color: #f5f5f5;
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.security-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.security-table tr.group-member-row {
+  background-color: #f9f9f9;
+}
+
+.security-table tr:last-child td {
+  border-bottom: none;
+}
+
+.security-table tr:hover {
+  background-color: #f0f8ff;
+}
+
+.student-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.guest-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 40px !important;
+  color: #666;
+  font-style: italic;
+}
+
+.mark-guest-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.mark-guest-btn:hover {
+  background-color: #0b7dda;
+}
+
+.mark-single-btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.mark-single-btn:hover {
+  background-color: #e68900;
+}
+
+/* Responsive table */
+@media (max-width: 1200px) {
+  .security-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .controls {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .select-all-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}
