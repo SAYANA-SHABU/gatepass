@@ -724,15 +724,13 @@ const handleDeletePass = async (passId) => {
                       </div>
                       
                       <div className="card-actions">
-                        <button className="qr-button" disabled>
-                          <i className="fas fa-hourglass-half"></i> Awaiting Approval
-                        </button>
+                        
                       
 <button 
   className="delete-button"
   onClick={() => handleDeletePass(pass._id)}  // Only passing passId
 >
-  <i className="fas fa-trash"></i> Cancel
+  <i className="fas fa-trash"></i> Delete
 </button>
                       </div>
                     </div>
