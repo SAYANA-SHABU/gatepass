@@ -13,16 +13,9 @@ const AdminDashboard = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetchData();
-    
-    // Set up auto-refresh every 10 seconds
-    const intervalId = setInterval(() => {
-      fetchData();
-    }, 10000); // Refresh every 10 seconds
-    
-    return () => clearInterval(intervalId); // Cleanup on unmount
-  }, []);
+ useEffect(() => {
+  fetchData();
+}, []);
 
   const toggleExpand = (passId) => {
     setExpandedPass(expandedPass === passId ? null : passId);
@@ -614,5 +607,6 @@ const AdminDashboard = () => {
     </div>
   );
 };
+
 
 export default AdminDashboard;
